@@ -1,0 +1,304 @@
+<!DOCTYPE html> <!--evita que un navegador cambie al llamado "modo peculiar" al representar un documento; es decir, el <!DOCTYPE html>tipo de documento " " garantiza que el navegador haga todo lo posible por seguir las especificaciones pertinentes, en lugar de utilizar un modo de representación diferente que sea incompatible con algunas especificaciones. -->
+<html lang="en">
+<head><!--etiqueta que contiene los elemento contiene metainformación sobre la página HTML. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Hace que sea una pagina dinamica-->
+    <meta name="description" content="Arcadia es una empresa que se encarga de desarrollar auditorias y la transformacion digital de una empresa utilizando metodos vanguardista y innovadores"> <!--Esta es la descripcion de la pagina-->
+    <meta name="robots" content="index,follow">  <!--Ayuda al posicionamiento SEO en la busqueda-->
+    <link rel="stylesheet" href="./style.css"> <!--Link de conexion con css-->
+    <title>ARCADIA</title> <!--especifica el Titulo para la página HTML-->
+</head>
+<body> <!--elemento define el cuerpo del documento y es un contenedor de todos los contenidos visibles, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc.-->
+    <!--ETIQUETAS DE CONTENIDO-->
+        <header>  <!--Sección superior de nuestro website--> 
+            <nav> </nav> <!--Sección de navegación de nuestro website, siempre dentro del header-->
+        </header>
+
+        <main><!--Main es el contenido central de nuestro website, "la parte del medio"-->
+            <section>  
+                <!--Nuestro website puede estar divido por secciones, por ejemplo platzi tiene 3: El navegador de cursos y rutas, el feed y nuestras rutas de aprendizaje-->
+
+                <article>
+                        <!--Contenido independiente de la página. Es reutilizable-->
+                </article> 
+            </section>
+            <ul><!-- Lista desornada (Unorder List)-->
+                <li> Elemento de la lista desordenada</li> <!--Item List. Elementos de la lista-->
+            </ul> 
+            <ol><!-- Lista ordenada segun el numero (Order list)-->
+                <li> Elemento de la lista ordenada</li>
+            </ol> 
+        </main>
+
+        <footer>
+            <!--Sección final de nuestro website-->
+        </footer>
+
+        <!--ETIQUETAS QUE CONTIENEN CONTENIDO-->
+
+        <p>Soy un parrafo de linea</p> <!-- Etiequeta de parrafo o texto-->
+        <h1>Soy </h1>  <!--Títulos, muestran el texto más grande y con negrilla. Existen desde el h1 al h6-->
+        <a href="http://">Link</a>  <!--Enlaces/links que nos permitirán movernos entre páginas.-->
+
+        <!-- ETIQUETAS DE IMAGENES-->
+
+        <figure><!--Etiqueta contenedora de imagenes -->
+            <img src="" alt=""><!--Etiqueta de imagen -->
+            <figcaption>imagen extraida de</figcaption><!--Brinda una descripcion de la imagen-->
+        </figure>
+         <!-- ETIQUETAS DE VIDEOS-->
+         <section>
+            <video src=""controls preload="auto"></video> <!--la etiqueta muestra un video, los atributos 1. controls | atributo que muestra los controles en el video
+            2. preload="auto" | Empieza a descargar el video cuando se inicia la pagina -->
+            <video controls preload="auto"><!--Al agregar el video podemos iniciarlo segun nuestra necesidad #t=[inicio],[final]-->
+                <source src="./elementos.html#t=10,60"> <!--videos de diferentes formatos-->
+                <!--aqui van otros formatos, como m4v, mp4-->
+            </video> 
+         </section>
+        
+          <!-- FORMULARIOS-->
+
+          <div><!--Etiqueta de contenido-->
+            <form action=""><!--Etiqueta semantica de contenido de formulario-->
+                <label for="nombre"><!--contenedor de inputs-->
+                    <span>¿Cual es tu nombre?</span>
+                    <input type="text" id="nombre" placeholder="Ingresa tu nombre"><!--INPUT | tipo texto, el ID del input debe ser el ide del for de la label
+                    
+                    El placeholder | indica los usuarios-->
+                </label>
+                <label for="intereses">
+                    <span>¿Que dia empezaste a aprender HTML?</span>
+                    <input type="date" id="intereses">
+                </label>
+                <label for="horario">
+                    <span>¿En que horario estudias?</span>
+                    <input type="time" id="horario" placeholder="Ingresa tu horario" autocomplete="name" required>
+                </label>
+            </form>
+          </div>
+
+          <!-- SALTOS DE LINEA -->
+          
+          <hr> <!-- Agrega una regla horizontal, este elemento se usa para separar el contenido-->
+          <br> <!-- Define un salto de línea.-->
+          <pre> <!--El contenido se muestra, tal y como esta -->
+             
+          </pre>
+
+          <!-- VINCULOS -->
+          
+          <!-- <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> 
+            
+            Donde: El target | atributo especifica dónde abrir el documento vinculado.
+
+            El targetatributo puede tener uno de los siguientes valores:
+
+            _self- Por defecto. Abre el documento en la misma ventana/pestaña en la que se hizo clic
+            _blank- Abre el documento en una nueva ventana o pestaña
+            _parent- Abre el documento en el marco principal
+            _top- Abre el documento en el cuerpo completo de la ventana.
+            -->
+
+          <a href="https://www.w3schools.com/html/html_links.asp" target="_blank">Reenvia a otra pestana</a>
+          <br>
+          <a href="https://www.w3schools.com/html/html_links.asp" target="_self">abre en la misma pestana</a>
+          <br>
+          <a href="https://www.w3schools.com/html/html_links.asp" target="_parent">abre en la misma pestana</a>
+          <br>
+          <a href="https://www.w3schools.com/html/html_links.asp" target="_top">abre en la misma pestana</a>
+
+        <!-- TITULOS DE ENLACES -->
+        <!-- 
+            Atributo 
+
+            title | Atributo especifica información extra sobre un elemento. La información generalmente se muestra como un texto de información sobre herramientas cuando el mouse se mueve sobre el elemento.
+
+            -> <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+            -------------------------------------------------------
+            CORREO ELECTRONICO
+
+            Úselo mailto:dentro del hrefatributo para crear un enlace que abra el programa de correo electrónico del usuario (para permitirle enviar un nuevo correo electrónico):
+        
+            <a href="mailto:someone@example.com">Send email</a>
+
+            -------------------------------------------------------
+            BOTON
+            Para usar un botón HTML como enlace, debe agregar algún código JavaScript
+            <button onclick="document.location='default.asp'">HTML Tutorial</button>
+        -->
+
+          <!--ESTILOS-->
+
+            <!--Use el styleatributo para diseñar elementos HTML-->
+
+          <body style="background-color:powderblue;"></body> <!-- background-color | define el color de fondo de un elemento HTML-->
+          <h1 style="color:blue;">This is a heading</h1> <!--color | define el color del texto de un elemento HTML-->
+          <h1 style="font-family:verdana;">This is a heading</h1><!--font-familydefine | la fuente que se utilizará para un elemento HTML-->
+          <h1 style="font-size:300%;">This is a heading</h1><!--font-sizedefine | el tamaño del texto para un elemento HTML-->
+          <h1 style="text-align:center;">Centered Heading</h1><!--text-aligndefine la alineación horizontal del texto para un elemento HTML-->
+
+          <!--FORMATO -->
+
+          <!-- elementos para definir texto con un significado especial -->
+          <!--
+            <b>- Texto en negrita | sin ninguna importancia adicional
+
+            <strong>- Texto importante | define texto con gran importancia. El contenido interior normalmente se muestra en negrita.
+
+            <i>- Texto en cursiva | etiqueta se usa a menudo para indicar un término técnico, una frase de otro idioma, un pensamiento, el nombre de un barco, etc.
+
+            <em>- Texto enfatizado |  énfasis, usando acento verbal.
+            <mark>- Texto marcado | resalta una palabra (amarillo)
+            <small>- Texto más pequeño
+            <del>- Texto eliminado | Elimina la palabra con una ralla -
+            <ins>- Texto insertado |  define un texto que se ha insertado en un documento
+
+            <sub>- Texto de subíndice | define el texto del subíndice. El texto del subíndice aparece medio carácter por debajo de la línea normal y, a veces, se representa en una fuente más pequeña. El texto de subíndice se puede utilizar para fórmulas químicas, como H 2 O:
+
+            <sup>- Texto en superíndice | define texto en superíndice. El texto en superíndice aparece medio carácter por encima de la línea normal y, a veces, se representa en una fuente más pequeña. El texto en superíndice se puede usar para notas al pie, idela para iso 690 y sus referencias :
+          -->
+
+          <!--ELEMTNOS DE CITAS TEXTUALES-->
+          <!--
+            <blockquote>
+                
+            -> Elemento HTML define una sección que se cita de otra fuente. | Sangria
+            
+            Ejemplo:
+            <p>Here is a quote from WWF's website:</p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+            </blockquote>
+          -->
+
+          <!--
+            <q> 
+            
+            -> Define una cita breve. | Inserta en un texto comillas
+
+            Ejemplo:
+            <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+          -->
+
+        <!--
+            <abbr> 
+            
+            -> Define una abreviatura o un acrónimo, como "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM". 
+
+            Marcar abreviaturas puede brindar información útil a los navegadores, sistemas de traducción y motores de búsqueda.
+
+            Sugerencia: use el atributo de título global para mostrar la descripción de la abreviatura/acrónimo cuando pase el mouse sobre el elemento. 
+            
+            Ejemplo:
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+        -->
+
+        <!--
+            <address>
+            
+            ->Define la información de contacto del autor/propietario de un documento o artículo.
+
+            La información de contacto puede ser una dirección de correo electrónico, URL, dirección física, número de teléfono, identificador de redes sociales, etc.
+
+            El texto del <address>elemento generalmente se presenta en cursiva y los navegadores siempre agregarán un salto de línea antes y después del <address>elemento. 
+
+            Sugerencia: para agregar un salto de linea siempre <br>
+
+            Ejmplo: 
+
+            <address>
+                Written by John Doe.    <br>
+                Visit us at:            <br>
+                Example.com             <br>
+                Box 564, Disneyland     <br>
+                USA
+            </address>
+        -->
+
+        <!--
+            <cite>
+
+            ->Define el título de un trabajo creativo (por ejemplo, un libro, un poema, una canción, una película, una pintura, una escultura, etc.).
+
+            Nota: El nombre de una persona no es el título de una obra.
+
+            El texto del <cite>elemento normalmente se muestra en cursiva .
+
+            Ejemplo: 
+            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+        -->
+
+        <!-- 
+            <bdo> 
+            -> Se utiliza para anular la dirección del texto actual | BDO significa anulación bidireccional.
+            
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+
+        -->
+
+        <!-- COLORES -->
+
+        <!-- 
+            HTML admite 140 nombres de colores estándar | se pueden especificar mediante valores RGB, valores HEX, valores HSL, valores RGBA y valores HSLA
+
+            1. HSL significa tono, saturación y luminosidad. |Los valores de color HSLA son una extensión de HSL con un canal alfa (opacidad).
+            hsla( tono, saturación , luminosidad, alfa )
+
+            COLOR DE BORDES
+            <h1 style="border:2px solid Tomato;">Hello World</h1>
+
+            Los siguientes dos elementos <div> tienen su color de fondo establecido con valores RGBA y HSLA, que agregan un canal alfa al color (aquí tenemos un 50 % de transparencia):
+            <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+            <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+
+        -->
+
+        <!-- CSS EN HTML -->
+
+        <!-- 
+
+            CSS se puede agregar a documentos HTML de 3 maneras:
+
+            En línea : mediante el uso del styleatributo dentro de los elementos HTML
+
+            -> <h1 style="color:blue;">A Blue Heading</h1>
+
+            Interno - mediante el uso de un <style>elemento en la <head>sección
+
+            -> <style>
+                    body {background-color: powderblue;}
+                    h1   {color: blue;}
+                    p    {color: red;}
+                </style>
+
+            Externo : mediante el uso de un <link> elemento para vincular a un archivo CSS externo
+
+            ->  <link rel="stylesheet" href="styles.css"> | vicula hoja 
+            -> <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css"> | vincula enlace externo
+            -> <link rel="stylesheet" href="/html/styles.css"> | vincula enlace del directorio
+
+            1. color | define el color del texto que se utilizará.
+            -> color: blue;
+            
+            2. font-family | define la fuente que se utilizará.
+            -> font-family: verdana;
+
+            3. font-size | define el tamaño del texto que se utilizará.
+            -> font-size: 300%;
+
+            4. border | define un borde alrededor de un elemento HTML.
+            -> border: 2px solid powderblue;
+
+            5. padding | define un relleno (espacio) entre el texto y el borde. 
+            -> padding: 30px;
+
+            6. margin | define un margen (espacio) fuera del borde.
+            -> margin: 50px;
+
+        -->
+
+
+</body>
+</html>
