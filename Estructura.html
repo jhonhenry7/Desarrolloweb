@@ -1,14 +1,25 @@
 <!DOCTYPE html> <!--evita que un navegador cambie al llamado "modo peculiar" al representar un documento; es decir, el <!DOCTYPE html>tipo de documento " " garantiza que el navegador haga todo lo posible por seguir las especificaciones pertinentes, en lugar de utilizar un modo de representación diferente que sea incompatible con algunas especificaciones. -->
 <!--modo estándar del navegador es activado y las incorporaciones de HTML5 son interpretadas siempre que sea posible -->
 <html lang="en">
+    
 <head><!--etiqueta que contiene los elemento contiene metainformación sobre la página HTML. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Hace que sea una pagina dinamica-->
-    <meta name="description" content="Arcadia es una empresa que se encarga de desarrollar auditorias y la transformacion digital de una empresa utilizando metodos vanguardista y innovadores"> <!--Esta es la descripcion de la pagina-->
-    <meta name="robots" content="index,follow">  <!--Ayuda al posicionamiento SEO en la busqueda-->
-    <link rel="stylesheet" href="./style.css"> <!--Link de conexion con css-->
+
+    <!--En HTML5 no es necesario cerrar etiquetas simples con una barra al final, pero recomendamos utilizarlas por razones de compatibilidad
+    
+    Ejemplo: 
+    <meta charset="UTF-8"/>
+    -->
+    
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!--Hace que sea una pagina dinamica-->
+    <meta name="description" content="Arcadia es una empresa que se encarga de desarrollar auditorias y la transformacion digital de una empresa utilizando metodos vanguardista y innovadores"/> <!--Esta es la descripcion de la pagina-->
+    <meta name="robots" content="index,follow"/>  <!--Ayuda al posicionamiento SEO en la busqueda-->
+    <meta name=”keywords” content=”HTML5, CSS3, Javascript”/> <!--Ayuda al posicionamiento SEO en la busqueda, en cuanto a las palabras clave-->
+    <link rel="stylesheet" href="./style.css"/> <!--Link de conexion con css-->
     <title>ARCADIA</title> <!--especifica el Titulo para la página HTML-->
+    
 </head>
+    
 <body> <!--elemento define el cuerpo del documento y es un contenedor de todos los contenidos visibles, como encabezados, párrafos, imágenes, hipervínculos, tablas, listas, etc.-->
     <!--ETIQUETAS DE CONTENIDO-->
         <header>  <!--Sección superior de nuestro website--> 
@@ -29,12 +40,30 @@
             <ol><!-- Lista ordenada segun el numero (Order list)-->
                 <li> Elemento de la lista ordenada</li>
             </ol> 
+
+            <aside> <!-- Lista ordenada segun el numero (Order list)-->
+                    <blockquote>Mensaje número uno</blockquote>
+                    <blockquote>Mensaje número dos</blockquote>
+            </aside>
         </main>
 
         <footer>
             <!--Sección final de nuestro website-->
         </footer>
 
+        <!--ETIQUETAS QUE ENCABEZADO-->
+    
+    <!--representan seis niveles de encabezados de sección-->
+        <hgroup> <!--Etiqueta que agrupa las etiquetas de encabezado para evitar generar múltiples secciones durante la interpretación del documento por parte del navegador-->
+
+            <h1>Beetles</h1>
+            <h2>External morphology</h2>
+            <h3>Head</h3>
+            <h4>Mouthparts</h4>
+            <h5>Thorax</h5>
+            <h6>Prothorax</h6>
+         <hgroup>
+             
         <!--ETIQUETAS QUE CONTIENEN CONTENIDO-->
 
         <p>Soy un parrafo de linea</p> <!-- Etiequeta de parrafo o texto-->
@@ -47,34 +76,110 @@
             <img src="" alt=""><!--Etiqueta de imagen -->
             <figcaption>imagen extraida de</figcaption><!--Brinda una descripcion de la imagen-->
         </figure>
+             
          <!-- ETIQUETAS DE VIDEOS-->
+             
          <section>
-            <video src=""controls preload="auto"></video> <!--la etiqueta muestra un video, los atributos 1. controls | atributo que muestra los controles en el video
-            2. preload="auto" | Empieza a descargar el video cuando se inicia la pagina -->
+            <video src=""controls preload="auto"></video> <!--la etiqueta muestra un video, los atributos 
+            
+            1. controls | atributo que muestra los controles en el video
+            2. preload="auto" | Empieza a descargar el video cuando se inicia la pagina 
+            3. loop | Si este atributo es especificado, el navegador reproducirá el audio una y otra vez de forma automática.
+             -->
             <video controls preload="auto"><!--Al agregar el video podemos iniciarlo segun nuestra necesidad #t=[inicio],[final]-->
                 <source src="./elementos.html#t=10,60"> <!--videos de diferentes formatos-->
+                 <source src="lnk externo"> <!--videos de diferentes formatos-->
                 <!--aqui van otros formatos, como m4v, mp4-->
             </video> 
+<!--
+            poster | Este atributo provee una imagen para mostrarla en lugar del video antes de ser reproducido.
+            width  | Este atributo determina el tamaño del video en pixeles.
+            height | Este atributo determina el tamaño del video en pixeles.
+-->
          </section>
-        
+             
+         <!-- ETIQUETAS DE AUDIO-->
+
+             <audio src=”http://minkbooks.com/content/beach.mp3” controls></audio>
+
           <!-- FORMULARIOS-->
 
           <div><!--Etiqueta de contenido-->
+            <!--La Etiqueta de contenido DIV, solo especifica una division en el cuerpo, mas no especifica de que es esa division-->
             <form action=""><!--Etiqueta semantica de contenido de formulario-->
                 <label for="nombre"><!--contenedor de inputs-->
                     <span>¿Cual es tu nombre?</span>
                     <input type="text" id="nombre" placeholder="Ingresa tu nombre"><!--INPUT | tipo texto, el ID del input debe ser el ide del for de la label
                     
-                    El placeholder | indica los usuarios-->
+                    El placeholder | indica a los usuarios, lo que se debe mover-->
                 </label>
+                
+                <label for="time"> 
+                    <span>¿En que horario estudias?</span>
+                    <input type="time" id="time" placeholder="Ingresa tu horario" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
+                </label>
+                
+                <label for="datetime-local"> 
+                    <span>Ingresa la hora y fecha completa sin la zona horaria</span>
+                    <input type="datetime-local" id="datetime-local" placeholder="Ingresa tu horario" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
+                </label>
+
+                <label for="color"> 
+                    <span>Ingresa un color</span>
+                    <input type="color" id="color" placeholder="Ingresa tu Color" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
+                </label>
+
+                <label for="datetime"> 
+                    <span>Ingresa la hora y fecha completa</span>
+                    <input type="datetime" id="datetime" placeholder="Ingresa tu horario" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
+                </label>
+
                 <label for="intereses">
                     <span>¿Que dia empezaste a aprender HTML?</span>
-                    <input type="date" id="intereses">
+                    <input type="date" id="intereses"> <!--INPUT | ingresa datos de fecha-->
                 </label>
-                <label for="horario">
-                    <span>¿En que horario estudias?</span>
-                    <input type="time" id="horario" placeholder="Ingresa tu horario" autocomplete="name" required>
+
+                 <label for="week"> 
+                    <span>¿En que semana estudias?</span>
+                    <input type="week" id="week" placeholder="Ingresa tu semana" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
                 </label>
+
+                 <label for="month"> 
+                    <span>¿En que mes estudias?</span>
+                    <input type="month" id="month" placeholder="Ingresa tu mes" autocomplete="name" required> <!--INPUT | ingresa datos de hora-->
+                </label>
+
+                 <label for="email"> 
+                    <span>¿Cual es tu email?</span>
+                    <input type="email" id="email" placeholder="Ingresa tu email" required> <!--INPUT | ingresa datos de hora-->
+                 </label>
+
+                 <label for="search"> 
+                    <span>¿Que buscas?</span>
+                    <input type="search" id="search" placeholder="Ingresa lo que estas buscando" required> <!--INPUT | ingresa datos de hora-->
+                 </label>
+
+                 <label for="url"> 
+                    <span>¿Que buscas?</span>
+                    <input type="url" id="url" placeholder="Ingresa la URL" required> <!--INPUT | ingresa datos de hora-->
+                 </label>
+
+                <label for="tel"> 
+                    <span>¿Cual es tu telefono?</span>
+                    <input type="tel" id="tel" placeholder="Ingresa tu numero telefonico" required> <!--INPUT | ingresa datos de hora-->
+                 </label>
+
+                 <label for="number"> 
+                    <span>Ingresa un numero</span>
+                    <input type="number" id="number" placeholder="Ingresa un numero" min=”0” max=”10” step=”5” required> <!--INPUT | ingresa datos de hora-
+                        El valor step | define el incremento que sigue los valores 
+                        -->
+                 </label>
+
+                <label for="range"> 
+                    <span>Ingresa un numero</span>
+                    <input type="range" id="range" placeholder="Ingresa un numero" min=”0” max=”10” step=”5” required> <!--INPUT | ingresa datos de hora-->
+                 </label>
             </form>
           </div>
 
@@ -82,9 +187,7 @@
           
           <hr> <!-- Agrega una regla horizontal, este elemento se usa para separar el contenido-->
           <br> <!-- Define un salto de línea.-->
-          <pre> <!--El contenido se muestra, tal y como esta -->
-             
-          </pre>
+          <pre> </pre> <!--El contenido se muestra, tal y como esta -->
 
           <!-- VINCULOS -->
           
@@ -160,6 +263,35 @@
             <sup>- Texto en superíndice | define texto en superíndice. El texto en superíndice aparece medio carácter por encima de la línea normal y, a veces, se representa en una fuente más pequeña. El texto en superíndice se puede usar para notas al pie, idela para iso 690 y sus referencias :
           -->
 
+            <!-- elementos para definir hora y fecha-->
+             
+            <!--
+            
+            <time> - representa fecha y hora
+
+            Ejemplo:
+            <time datetime="2011-10-12" pubdate>publicado 12-10-2011</time>
+
+            -> El atributo datetime tiene el valor que representa la fecha
+                 CADENA VALIDA
+                    * 2011        | una cadena válida de año
+                    * 0001        | una cadena válida de mes
+                    * 2011-11     | A-M-D
+                    * 2011-11-18
+                    * 11-18       | M-D
+                    * 2011-W47    | A-Semana
+                    * 14:54       | una cadena de hora válida
+                    * 14:54:39
+                    * 14:54:39.929
+                    * 2011-11-18T14:54:39.929 | una cadena de fecha y hora local válida
+                    * 2011-11-18 14:54:39.929
+                    * 2011-11-18T14:54:39.929Z| una cadena de fecha y hora global válida
+                    * 2011-11-18T14:54:39.929-0400
+                    * 2011-11-18T14:54:39.929-04:00
+                    * PT4H18M3S | una cadena valida de duración
+           -> El atributo "pubdate" solo es agregado para indicar que el valor del atributo | datetime representa la fecha de publicación
+          -->
+             
           <!--ELEMTNOS DE CITAS TEXTUALES-->
           <!--
             <blockquote>
