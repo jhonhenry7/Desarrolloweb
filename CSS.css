@@ -100,6 +100,10 @@ body {
   background-repeat: no-repeat;
   background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
   background-position: right top;
+  background-clip:   | Propiedad que especifica hasta qué punto debe extenderse el fondo dentro de un elemento
+       background-clip:border-box; | especifica que se extienda hasta el limite del borde del elemento
+       background-clip: padding-box; | especifica que se extienda hasta el limite del padding
+       background-clip: content-box; | especifica que se extienda hasta el limite del context
 }
 
 a
