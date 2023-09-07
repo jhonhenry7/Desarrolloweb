@@ -1,1 +1,132 @@
+/*
+                SINTAXIS
+
+body -> selecto - apunta al elemento HTML al que desea aplicar estilo.
+{ 
+
+| Cada declaración incluye un nombre de propiedad CSS y un valor, separados por dos puntos. |
+
+----------------------
+|propiedad | | valor |
+----------------------
+| color:   | |  red; |
+----------------------
+|text-align: |center;|
+----------------------
+
+} -> El bloque de declaración contiene una o más declaraciones separadas por punto y coma.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+                SELECTOR DE IDENTIFICACIÓN
+
+1. La siguiente regla CSS se aplicará al elemento HTML con id="para1": 
+
+#para1 {   -> corresponde a un id que se utiliza una sola vez
+  text-align: center;
+  color: red;
+}
+
+
+2. La siguiente regla CSS se aplicará al elemento HTML con class="center" 
+
+.para1{  -> corresponde a una class y se utiliza varias veces
+  text-align: center;
+  color: red;
+}
+
+3. Especificacion de una clase para que solo deba afectar a elementos HTML específicos.
+--------------------
+ESTRUCTURA
+
+etiqueta.class{
+}
+--------------------
+ 
+  p.center { ->  En este ejemplo, solo los elementos <p> con class="center" serán rojos y estarán alineados al centro: 
+    text-align: center;
+    color: red;
+  }
+
+NOTA: Los elementos HTML también pueden hacer referencia a más de una clase.
+
+el estilo del elemento <p> se ajustará a class="center" y class="large": 
+
+<p class="center large">This paragraph refers to two classes.</p>
+
+4. SELECTOR UNIVERSARL
+
+* { -> La siguiente regla CSS afectará a todos los elementos HTML de la página:
+  text-align: center;
+  color: blue;
+}
+
+5. SELECTOR DE AGRUPACIÓN 
+--------------------
+ESTRUCTURA
+
+etiqueta, etiqueta,... {
+}
+--------------------
+h1, h2, p {  -> Para agrupar selectores, separe cada selector con una coma.
+  text-align: center;
+  color: red;
+}
+
+/*
+
+
+1. background-color:
+                    background-color:hsl(9, 100%, 64%); | hsl(hue [from 0 to 360], saturation [0%-100%], lightness[0%-100%]) 
+                       saturation - La saturación se puede describir como la intensidad de un color. 100% es color puro, sin matices de grises.
+                       Lightness - La luminosidad de un color se puede describir como cuánta luz quieres darle al color, donde 0% significa sin luz (negro), 50% significa 50% de luz (ni oscuro ni claro) y 100% significa luminosidad total (blanco)
+                    background-color:hsla(9, 100%, 64%, 0.5);
+                    background-color:#ff6347;
+                    background-color:rgb(255, 99, 71);  | rgb(255, 255, 255).
+                    background-color:rgba(255, 99, 71, 0.5); | rgba(red, green, blue, alpha o opacidad rango [0-1]) 
+2. background-image: 
+      body, p {
+              background-image: url("paper.gif");
+              background-repeat: repeat-x; | Si la imagen de arriba se repite solo horizontalmente
+              background-repeat: no-repeat; | La propiedad también especifica mostrar la imagen de fondo solo una vez
+              background-position: right top; | propiedad se utiliza para especificar la posición de la imagen de fondo.
+              background-attachment: fixed; | propiedad especifica si la imagen de fondo debe ser fija
+              background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
+      }
+
+PROPIEDAD ABREVIADA 
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
+  background-position: right top;
+}
+
+a
+
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+NOTA: Cuando se utiliza la propiedad abreviada, el orden de los valores de las propiedades es:
+background-color
+background-image
+background-repeat
+background-attachment
+background-position
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+3. opacity:
+
+    div {
+          background-color: green;
+          opacity: 0.3; | value from 0.0 - 1.0
+        }  
+color:
+border:2px solid Violet
+
+*/
+
+
+
+
+*/
 
