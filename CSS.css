@@ -1,4 +1,12 @@
 /*
+
+NOTA: El margin del body por defecto es 8
+body{
+    margin: 0;
+}
+
+validador de CSS = https://jonassebastianohlsson.com/specificity-graph/
+
                 SINTAXIS
 
 body -> selecto - apunta al elemento HTML al que desea aplicar estilo.
@@ -46,7 +54,38 @@ etiqueta.class{
     text-align: center;
     color: red;
   }
+--------------------
+  [href] 
+      {
+      
+      }
 
+   [href="valor"] se especifica 
+      {
+      
+      }
+
+    [href^="valor"] todo aquel que empiece por "valor"
+          {
+          
+          }
+
+    [href*="valor"] todo aquel que contiene la palabra con "valor"
+          {
+          
+          }
+
+      [href$="valor"] todo aquel que termine con la palabra "valor"
+          {
+          
+          }
+
+      [lang|= "en-GB"] todo aquel que termine con la palabra "valor"
+          {
+          
+          }
+
+  
 NOTA: Los elementos HTML también pueden hacer referencia a más de una clase.
 
 el estilo del elemento <p> se ajustará a class="center" y class="large": 
@@ -72,7 +111,58 @@ h1, h2, p {  -> Para agrupar selectores, separe cada selector con una coma.
   color: red;
 }
 
+6. SELECTOR DE HERMANOS SIGUIENTES
+--------------------
+
+.text-2 + h2 {  | selecciona al hermano siguiente
+
+}
+
+.text-2 ~ p {  | selecciona todos los hermanos siguientes que sean p
+
+}
+
+6. SELECTOR DE HIJOS DIRECTOS
+--------------------
+
+.text-2 > p {  | selecciona todos los hijos directos de la etiqueta 
+
+}
 /*
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ORDEN DE JERARQUIA Y FUNCION DE LA ESPECIFICIDAD
+
+Especificad de un selector
+--------------------
+
+    Etiquetas y pseudoelementos = 001
+    Clases, atributos y pseudoclases = 010
+    Id's = 100
+    Estilos en linea = 1000
+    !important = GANA A TODO
+
+
+h1 .title #title {  -> 1 , 1, 1 | la suma de estas es la que tiene mayor importancia
+
+}
+
+
+
+Nota: el grafico no debe tener altos picos dado que eso nos indica que no es bueno. para identificar que sea bueno el codigo css o no, debe ser una linea estable sin ningun pico
+
+CASCADA de un selector
+--------------------
+
+La cascada funciona siempre y cuando la especificidad de un elemento este en el mismo valor igual a la especificidad
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+HERENCIA
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 1. background-color:
@@ -95,9 +185,9 @@ h1, h2, p {  -> Para agrupar selectores, separe cada selector con una coma.
 
 PROPIEDAD ABREVIADA 
 body {
-  background-color: #ffffff;
-  background-image: url("img_tree.png");
-  background-repeat: no-repeat;
+  background-color: #ffffff; | Propiedad que especifica el color del background
+  background-image: url("img_tree.png"); | Propiedad que especifica que debe ponerse una imagen de fondo
+  background-repeat: no-repeat;  | propiedad que especifica si debe repetirse la imagen o no
   background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
   background-position: right top;
   background-clip:   | Propiedad que especifica hasta qué punto debe extenderse el fondo dentro de un elemento
@@ -124,10 +214,53 @@ background-position
           background-color: green;
           opacity: 0.3; | value from 0.0 - 1.0
         }  
-color:
-border:2px solid Violet
+4. color:
+
+    div {
+        color:inherit; |fuerza la herencia
+        color:initial;
+    }
+
+5. Margin: Se desplaza mas el contenido no se extiende se conserva
+
+    -> Se aplica a los elementos en  bloque
+    div {
+        margin-top: margen superior
+        margin-right: margen derecho
+        margin-bottom: margen inferior
+        margin-left: margen izquierdo | 
+            auto: pega el elemento a la derecha
+
+            NOTA: debemos darle un ancho y alto declarado .
+
+        4 valores -> margin: top left right bottom
+        3 valores -> margin: top left/right bottom
+        2 valores -> margin: top/right bottom/left
+        1 valor -> margin: top/right/bottom/left
+    }
+
+6. Padding | Permite generar espacio interno entre el borde y la caja | el contenido crece segun la direccion y el valor dado
+
+    -> Se aplica a los elementos en linea y bloque
+
+    div {
+        padding-top: padding superior
+        padding-right: padding derecho
+        padding-bottom: padding inferior
+        padding-left: padding izquierdo | 
+            auto: pega el elemento a la derecha
+
+            NOTA: debemos darle un ancho y alto declarado .
+
+        4 valores -> padding: top left right bottom
+        3 valores -> padding: top left/right bottom
+        2 valores -> padding: top/right bottom/left
+        1 valor -> padding: top/right/bottom/left
+    }
+
 
 */
+
 
 
 
