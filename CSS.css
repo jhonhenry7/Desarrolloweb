@@ -183,30 +183,70 @@ HERENCIA
               background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
       }
 
-PROPIEDAD ABREVIADA 
-body {
-  background-color: #ffffff; | Propiedad que especifica el color del background
-  background-image: url("img_tree.png"); | Propiedad que especifica que debe ponerse una imagen de fondo
-  background-repeat: no-repeat;  | propiedad que especifica si debe repetirse la imagen o no
-  background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
-  background-position: right top;
-  background-clip:   | Propiedad que especifica hasta qué punto debe extenderse el fondo dentro de un elemento
-       background-clip:border-box; | especifica que se extienda hasta el limite del borde del elemento
-       background-clip: padding-box; | especifica que se extienda hasta el limite del padding
-       background-clip: content-box; | especifica que se extienda hasta el limite del context
-}
+    body {
+      background-color: #ffffff; | Propiedad que especifica el color del background
+      background-image: url("img_tree.png"); | Propiedad que especifica que debe ponerse una imagen de fondo
+      background-repeat: no-repeat;  | propiedad que especifica si debe repetirse la imagen o no
+      background-attachment: scroll; | propiedad especifica si la imagen de fondo debe desplazarce 
+      background-position: right top;
+      background-clip:   | Propiedad que especifica hasta qué punto debe extenderse el fondo dentro de un elemento
+           background-clip:border-box; | especifica que se extienda hasta el limite del borde del elemento
+           background-clip: padding-box; | especifica que se extienda hasta el limite del padding
+           background-clip: content-box; | especifica que se extienda hasta el limite del context
+        }
+    -----------------------------------------
+    PROPIEDAD ABREVIADA
+    
+    body {
+      background: #ffffff url("img_tree.png") no-repeat right top;
+    }
 
-a
+    NOTA: Cuando se utiliza la propiedad abreviada, el orden de los valores de las propiedades es:
+    background-color
+    background-image
+    background-repeat
+    background-attachment
+    background-position
 
-body {
-  background: #ffffff url("img_tree.png") no-repeat right top;
-}
-NOTA: Cuando se utiliza la propiedad abreviada, el orden de los valores de las propiedades es:
-background-color
-background-image
-background-repeat
-background-attachment
-background-position
+3. border:
+    ----------------
+    ESTILO
+
+    Code: Border-style
+
+    dotted | Define un borde discontinuo de puntos
+    p.dotted {border-style: dotted;}
+
+    dashed | Define un borde discontinuo de rallas
+    p.dashed {border-style: dashed;}
+
+    solid  | Define un borde sólido de linea
+    p.solid {border-style: solid;}
+
+    double | Define un doble borde delinea
+    p.double {border-style: double;}
+
+    groove | Define un borde ranurado 3D. El efecto depende del valor del color del borde.
+    p.groove {border-style: groove;}
+
+    ridge  | Define un borde estriado 3D. El efecto depende del valor del color del borde.
+    p.ridge {border-style: ridge;}
+
+    inset  | Define un borde insertado 3D. El efecto depende del valor del color del borde.
+    p.inset {border-style: inset;}
+
+    outset | Define un borde inicial 3D. El efecto depende del valor del color del borde.
+    p.outset {border-style: outset;}
+
+    none   | No define fronteras
+    p.none {border-style: none;}
+
+    hidden | Define un borde oculto
+    p.hidden {border-style: hidden;}
+
+    La border-style | propiedad puede tener de uno a cuatro valores (para el borde superior, el borde derecho, el borde inferior y el borde izquierdo).
+    p.mix {border-style: dotted dashed solid double;}
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 3. opacity:
 
