@@ -6,8 +6,8 @@ function validar(numeroTarjeta, correo, cvv, fecha) {
   var cvv = document.getElementById('cvv').value;
   var pattern=/^\d{3}$/;
   // Validacion de fecha 
-  var fecha = document.getElementById('fecha').value;
-  var regex = /^\d{2}\/\d{2}\/\d{4}$/;
+  var fecha = document.getElementById("fecha").value;
+  var regexfecha = /^(0[1-9]|[12][0-9]|3[01])\/(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\/\d{4}$/;
   // Validacion correo @continental.edu.pe
   var correo = document.getElementById('correo').value;
   var dominioPermitido = "@continental.edu.pe";
@@ -25,10 +25,10 @@ function validar(numeroTarjeta, correo, cvv, fecha) {
     alert("El Codigo de seguridad debe contener 3 dígitos");
   }
 
-  if (regex.test(fecha)) {
-    alert('Fecha válida');
+  if (regexfecha.test(fecha)) {
+    alert("Formato de fecha válido: " + fecha);
   } else {
-   alert('Fecha inválida. El formato debe ser dd/mm/yyyy');
+    alert("Formato de fecha inválido. Por favor, ingrese la fecha en el formato 01/enero/2023.");
   }
 
   if (correo.endsWith(dominioPermitido)) {
@@ -37,7 +37,6 @@ function validar(numeroTarjeta, correo, cvv, fecha) {
     alert("El correo debe ser de la forma usuario@continental.edu.pe");
   }
 }
-
 
 
 
