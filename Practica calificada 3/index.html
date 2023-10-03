@@ -1,12 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
   <head> <!--Aqui van los metadatos-->
-    
+<head>
+    <title>Medio de Pago</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='validacion.js'></script>
+    <style>
+        .contenedor{
+            background-color:rgb(176, 196, 233);
+            height:575px;
+            width:380px;
+            text-align:justify;
+            color:rgb(0, 0, 0);
+            margin: auto;
+            border: 1px solid  rgb(60, 128, 146);
+            align-items: auto;
+            border-radius:15px;
+        }
+        .titulos{
+            text-align: center;
+        }
+        .informacion{
+            padding-right: 30px;
+            padding-left: 60px;
+        }
+        .informacion input{
+            border-radius: 100px;   
+        }
+        .imagen{
+            margin-right: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            float: right;
+        }
+        .descripcion{
+            margin-left: 65px;
+        }
+        .botones{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
   </head>
-  <body><!--Aqui el cuerpo-->
-    
-  </body>
-  <footer> <!--Aqui el pie de la pagina>
-    
-  </footer>
-</html>
+    <form>
+        <div class="contenedor">
+            <div class="titulos">
+                <h2> Create your  Basic (Yearly) account </h2><hr />
+                <h2> Información de Factura </h2>
+            </div>
+            <div class="informacion">
+            <div class="form-group owner">
+                <label for="owner">Nombres&nbsp;:</label>
+                <input style="text-align: center" type="text" class="form-control" id="owner">
+            </div>
+            <small>
+                <div class="descripcion">ingrese su nombre completo</div>
+            </small>
+            <br>
+            <div class="form-group" id="card-number-field">
+                <label for="cardNumber"># T. credi :</label>
+                <input style="width: 105px ; text-align: center" type="number" class="form-control" id="cardNumber">
+                <div class="imagen">
+                    <img style="height:28px" style="width:50" src=imagenes/tarjeta.png alt="">
+                </div>
+            </div>
+            <small>
+                <div class="descripcion">ingrese su num de tarjeta</div>
+            </small>
+            <br>
+            <div class="form-group CVV">
+                <label for="cvv">Cod. segu:</label>
+                <input style="width: 55px ; text-align: center" type="number" class="form-control" id="cvv" pattern="\d{3}" required>
+                <div class="imagen">
+                    <img style="height:28px" style="width:50" src=imagenes/cvv.png alt="">
+                </div>
+            </div>
+            <small>
+                <div class="descripcion">ingrese codigo de 3 digitos</div>
+            </small>
+            <br>
+            <div class="form-group date" id="expiration-date">
+            <label>Fec. expir:
+                <input style="text-align: center" type="text" id="fecha" required placeholder="dd/mm/yyyy" />
+            </label>
+            <small>
+                <div class="descripcion">ingrese la fecha de expiracion</div>
+            </small>
+            </div>
+            <br>
+            <label>Direccion: </label>
+            <input style="text-align: center" type="text " id="num" required>
+            <small>
+                <div class="descripcion">ingrese su direccion</div>
+            </small>
+            <br>
+            <label>Ciudad&nbsp;&nbsp;&nbsp; : </label>
+            <input style="text-align: center" type="text" required>
+            <small>
+                <div class="descripcion">ingrese su ciudad</div>
+            </small>
+            <br>
+            <div class="form-group email" id="correoDiv">
+                <label for="correo">Correo&nbsp;&nbsp;&nbsp; :</label>
+                <input style="text-align: center" type="email" class="form-control" id="correo">
+                <small>
+                    <div class="descripcion">ingrese su email</div>
+                </small>
+            </div>
+            </div>
+            <br><br>
+            <div class="botones">
+                <button type="button"
+                   onclick="validar(document.getElementById('num','text').value)">
+                   Validar
+                </button>
+                <button type="reset"> 
+                   Limpiar
+                </button> 
+                <p id="blanco"> </p>
+            </div>
+        </div>
+    </form> 
+</body>
